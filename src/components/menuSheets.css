@@ -1,0 +1,118 @@
+.menuSheets {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--color-fondo);
+}
+
+.menuSheets-subtitulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primario);
+  margin: 2rem 0 1rem;
+  font-family: 'Baloo 2', sans-serif;
+  text-align: left;
+  border-top: 2px solid var(--color-primario);
+  padding-top: 0.5rem;
+}
+
+/* Cards del menú */
+.menuSheets-cards {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;        /* scroll horizontal en móvil */
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+}
+
+.menuSheets-cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.menu-titulo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--color-primario);
+  margin-bottom: 2rem;
+  font-family: 'Baloo 2', sans-serif;
+  text-align: center;
+}
+
+.menuSheets-cards::-webkit-scrollbar-thumb {
+  background: var(--color-primario);
+  border-radius: 4px;
+}
+
+.menuSheets-cards::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.menuSheets-card {
+  flex: 0 0 auto; /* ancho fijo para scroll */
+  margin-top: 1rem;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  width: 300px; /* tamaño fijo para las cards */
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-left: 2rem; /* espacio a la izquierda */
+}
+
+.menuSheets-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 12px rgba(0,0,0,0.15);
+}
+
+/* Imagen dentro de la card */
+.menuSheets-imagen {
+  width: 100%;
+  height: 200px; /* altura fija para las imágenes */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.menuSheets-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.menuSheets-nombre {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.menuSheets-descripcion {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.menuSheets-precio {
+  font-weight: bold;
+  color: var(--color-primario);
+  font-size: 1.3rem;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .menuSheets-cards {
+    justify-content: flex-start; /* en móvil, alineadas a la izquierda */
+  }
+}
+
+@media (min-width: 769px) {
+  .menuSheets-cards {
+    justify-content: flex-start; /* en PC, centradas */
+    overflow-x: visible;     /* en PC no se necesita scroll */
+    flex-wrap: wrap;         /* permite varias filas centradas */
+  }
+}

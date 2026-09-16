@@ -1,0 +1,91 @@
+main {
+  padding-top: 40px; /* evita que el contenido quede debajo del header */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--color-fondo);
+  border-bottom: 3px solid var(--color-fondo);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primario);
+  font-family: 'Cinzel', serif;
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--color-primario);
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--color-primario);
+  font-weight: 600;
+  font-family: 'Cinzel', serif;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* aparece en móvil */
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--color-fondo);
+    position: absolute;
+    top: 70px;
+    left: 50%;              /* lo colocamos en el centro */
+    transform: translateX(-50%); /* lo centramos horizontalmente */
+    width: 90%;             /* ocupa casi todo el ancho */
+    max-width: 400px;       /* límite para que no se vea gigante */
+    padding: 1rem;
+    display: none;
+    text-align: center;     /* centra los textos */
+    border-bottom: 3px solid var(--color-primario);
+    border-radius: 8px;
+  }
+
+  .navbar ul.active {
+    display: flex; /* se muestra al dar clic */
+  }
+
+  .navbar a {
+    font-size: 1rem;
+  }
+}
+

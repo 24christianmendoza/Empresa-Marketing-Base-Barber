@@ -1,0 +1,114 @@
+.mapa {
+  padding: 2rem 0;
+  background-color: var(--color-fondo);
+}
+
+.mapa-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primario);
+  font-family: 'Baloo 2', cursive;
+  text-align: center;
+}
+
+.mapa-container {
+  width: 100%;
+  height: 450px;
+}
+
+.mapa-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Bloque de información */
+.mapa-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: var(--color-secundario);
+}
+
+.mapa-col {
+  flex: 1;
+  min-width: 250px;
+  background: var(--color-fondo); /* fondo blanco */
+  padding: 1rem;
+  text-align: left; /* alineado a la izquierda */
+}
+
+.mapa-col h3 {
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+}
+
+.mapa-col h4 {
+  margin-top: 1rem;
+  color: var(--color-primario);
+  font-weight: bold;
+}
+
+
+
+.mapa-dinamica {
+  display: flex;
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;      /* centra verticalmente si das altura */
+  width: 100%;
+}
+
+.mapa-dinamica img {
+  width: 100%;        /* ocupa todo el ancho disponible */
+  max-width: 600px;   /* límite en pantallas grandes */
+  height: auto;       /* mantiene proporción */
+  border-radius: 12px;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25D366; /* verde WhatsApp */
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: 'Baloo 2', sans-serif;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+.whatsapp-icon {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  margin-bottom: .5rem; /* Ajusta la alineación vertical */
+}
+
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .mapa-info {
+    flex-direction: column;
+    align-items: center;   /* 🔑 cambia de flex-start a center */
+  }
+
+  .mapa-col {
+    width: 100%;
+    max-width: 400px;
+  }
+
+
+  .mapa-dinamica img {
+    max-width: 90%;
+    margin: 0 auto;        /* asegura que quede centrada */
+    margin-right: 2rem;      /* espacio superior */
+  }
+}

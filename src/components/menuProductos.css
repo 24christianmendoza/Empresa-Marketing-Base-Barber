@@ -1,0 +1,124 @@
+.menu-productos {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--color-fondo);
+}
+
+.menu-productos-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+  font-family: 'Baloo 2', sans-serif;
+}
+
+/* Controles (filtros + búsqueda) */
+.menu-productos-controles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Botones de filtro */
+.menu-productos-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.menu-productos-filtros button {
+  min-width: 140px;
+  padding: 0.6rem 0;
+  border: 2px solid var(--color-primario);
+  background: var(--color-secundario);
+  color: var(--color-primario);
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.menu-productos-filtros button:hover {
+  background: var(--color-primario);
+  color: #fff;
+}
+
+/* Barra de búsqueda */
+.menu-productos-busqueda {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--color-primario);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Cards base */
+.menu-productos-cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-top: 2px solid var(--color-primario);
+}
+
+.menu-productos-card {
+  background: var(--color-secundario);
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  width: 220px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 1rem;
+}
+
+.menu-productos-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 12px rgba(0,0,0,0.15);
+}
+
+.menu-productos-imagen img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.menu-productos-descripcion {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-secundario);
+}
+
+.menu-productos-precio {
+  font-weight: bold;
+  color: var(--color-primario);
+  font-size: 1.2rem;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  /* En móvil: grid de 2 columnas */
+  .menu-productos-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .menu-productos-card {
+    max-width: 10rem; /* opcional para que no se vean demasiado grandes */
+  }
+
+  .menu-productos-busqueda {
+    width: 80%;
+    max-width: none;
+  }
+}

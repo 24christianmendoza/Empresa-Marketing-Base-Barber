@@ -1,0 +1,84 @@
+.promociones {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--color-fondo);
+}
+
+.promociones-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primario);
+  margin-bottom: 2rem;
+  font-family: 'Cinzel', serif;
+}
+
+/* Contenedor de las dos cards */
+.promociones-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap; /* para que en móvil se acomoden */
+}
+
+/* Card grande rectangular */
+.promocion-card {
+  background: var(--color-secundario);
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  width: 800px;       /* ancho grande tipo rectángulo */
+  height: 250px;      /* altura fija */
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.promocion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 18px rgba(0,0,0,0.15);
+}
+
+.promocion-imagen img {
+  width: 300px;         /* mitad de la card para la imagen */
+  height: 100%;
+  object-fit: cover;
+}
+
+.promocion-info {
+  padding: 1rem;
+  text-align: left;
+  width: 50%;         /* mitad de la card para texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.promocion-info h3 {
+  font-size: 1.5rem;
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+}
+
+.promocion-info p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .promocion-card {
+    flex-direction: column; /* en móvil imagen arriba, texto abajo */
+    width: 100%;
+    height: auto;
+  }
+
+  .promocion-imagen img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .promocion-info {
+    width: 100%;
+    text-align: center;
+  }
+}

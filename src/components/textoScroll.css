@@ -1,0 +1,31 @@
+.scroll-container {
+  width: 100%;              
+  overflow: hidden;
+  background: var(--color-primario);    /* franja naranja */
+  color: var(--color-fondo);      
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+  position: relative;
+
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  animation: scroll-left 15s linear infinite;
+  min-width: 100%;           /* asegura que cubra todo el ancho */
+  text-align: center;        /* centra el texto dentro */
+  
+}
+
+/* Animación */
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

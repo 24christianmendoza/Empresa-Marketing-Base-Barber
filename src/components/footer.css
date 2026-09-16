@@ -1,0 +1,75 @@
+.footer {             /* ocupa todo el ancho */
+  background-color: var(--color-primario);; /* naranja principal */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+/* Para que siempre quede al final */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer.footer {
+  margin-top: auto; /* empuja el footer al final */
+}
+
+.footer-left {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-text {
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: #fff;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+  background-color: #fff;
+  color: var(--color-primario);
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
