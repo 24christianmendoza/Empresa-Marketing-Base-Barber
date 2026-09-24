@@ -2,8 +2,8 @@ import "./servicios.css";
 
 export default function Servicios() {
   return (
-    <div className="servicios-lista">
-      <h2 className="servicios-titulo">Haircut & Shave Selection</h2>
+    <div id="info" className="servicios-lista">
+      <h2 className="servicios-titulo">Cortes & Servicios</h2>
 
       <div className="servicio-item">
         <h3 className="servicio-nombre">Signature Executive Cut</h3>
